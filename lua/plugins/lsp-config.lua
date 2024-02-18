@@ -39,6 +39,12 @@ return {
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.ast_grep.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
 
 			-- Global mappings.
 			vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
